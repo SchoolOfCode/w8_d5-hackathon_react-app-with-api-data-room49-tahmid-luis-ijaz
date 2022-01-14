@@ -15,7 +15,8 @@ function Fetch() {
           console.log(data.results)
         }
         fetchData();
-      },[]); 
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+      },[setHoldHero]); 
 
       return(
       <div>
