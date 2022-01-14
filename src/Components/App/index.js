@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import FetchData from '../Fetch';
 import Spiderman from '../Spiderman';
 import Superman from '../Superman';
