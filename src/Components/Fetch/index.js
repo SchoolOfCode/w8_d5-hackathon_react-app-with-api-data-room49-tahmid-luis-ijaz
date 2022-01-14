@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 
 
 function Fetch() {
-    const[hero, setHero] = useState("superman") 
+    // const[hero, setHero] = useState("superman") 
     const [holdHero, setHoldHero] = useState('')
 
     useEffect(() => {
         async function fetchData() {
-          let response = await fetch(`https://www.superheroapi.com/api.php/5144671915557298/search/${hero}`);
+          let response = await fetch(`https://www.superheroapi.com/api.php/5144671915557298/search/${'superman'}`);
           const data = await response.json();
           setHoldHero(data.results && data.results[1]);
-          setHero()
+          // setHero()
           console.log(holdHero)
           console.log(data.results)
         }
         fetchData();
-      },[setHero]); 
+      },[]); 
 
       return(
       <div>
