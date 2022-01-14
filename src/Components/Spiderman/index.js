@@ -22,6 +22,7 @@ function Spiderman() {
       
       <nav>
         <Link to="/">Batman</Link>
+        <br/>
         <Link to="/superman">Superman</Link>
       </nav>
       

@@ -21,6 +21,7 @@ function Superman() {
     <div>
       <nav>
         <Link to="/spiderman">Spiderman</Link>
+        <br/>
         <Link to="/">Batman</Link>
       </nav>
       <h1>{holdHero.name}</h1>

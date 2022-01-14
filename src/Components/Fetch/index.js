@@ -23,7 +23,8 @@ function Fetch() {
     <>
     
      <nav>
-        <Link to="/">Spiderman</Link>
+        <Link to="/spiderman">Spiderman</Link>
+        <br/>
         <Link to="/superman">Superman</Link>
       </nav>
       <h1>{holdHero.name}</h1>
