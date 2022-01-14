@@ -15,7 +15,7 @@ function Fetch() {
           console.log(data.results)
         }
         fetchData();
-      },[]); 
+      },[setHero]); 
 
       return(
       <div>
@@ -30,4 +30,3 @@ alt="superman"/>
 export default Fetch 
 //deploy
 
-{/* <img src={pokemon.sprites.other["official-artwork"].front_default} alt={pokemon.name}></img> */}
