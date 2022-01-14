@@ -9,7 +9,7 @@ function Fetch() {
         async function fetchData() {
           let response = await fetch(`https://www.superheroapi.com/api.php/5144671915557298/search/${hero}`);
           const data = await response.json();
-          setHoldHero(data.results);
+          setHoldHero(data.results && data.results[1].id);
           setHero()
           console.log(holdHero)
         }
