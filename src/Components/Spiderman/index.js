@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Spiderman() {
   // const[hero, setHero] = useState("superman")
@@ -18,14 +18,17 @@ function Spiderman() {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return holdHero ? (
-    <div>
+    <>
+      
       <nav>
-        {/* <Link to="/spiderman">spiderman</Link> */}
+        <Link to="/">Batman</Link>
+        <Link to="/superman">Superman</Link>
       </nav>
+      
       <h1>{holdHero.name}</h1>
       <h2>{holdHero.biography['full-name']} </h2>
       <img src={holdHero.image['url']} alt={holdHero.name} />
-    </div>
+    </>
   ) : (
     <>Loading...</>
   );

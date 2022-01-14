@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
+
 function Fetch() {
   // const[hero, setHero] = useState("superman")
   const [holdHero, setHoldHero] = useState('');
@@ -16,13 +18,19 @@ function Fetch() {
     fetchData();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   return holdHero ? (
-    <div>
+    <>
+    
+     <nav>
+        <Link to="/">Spiderman</Link>
+        <Link to="/superman">Superman</Link>
+      </nav>
       <h1>{holdHero.name}</h1>
       <h2>{holdHero.biography['full-name']} </h2>
       <img src={holdHero.image['url']} alt={holdHero.name} />
-    </div>
+    
+    </>
   ) : (
     <>Loading...</>
   );

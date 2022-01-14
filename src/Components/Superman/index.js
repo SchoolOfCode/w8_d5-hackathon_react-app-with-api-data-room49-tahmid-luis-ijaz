@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Superman() {
   // const[hero, setHero] = useState("superman")
@@ -19,7 +19,10 @@ function Superman() {
   }, []);
   return holdHero ? (
     <div>
-      <nav>{/* <Link to="/Superman">Superman</Link> */}</nav>
+      <nav>
+        <Link to="/spiderman">Spiderman</Link>
+        <Link to="/">Batman</Link>
+      </nav>
       <h1>{holdHero.name}</h1>
       <h2>{holdHero.biography['full-name']} </h2>
       <img src={holdHero.image['url']} alt={holdHero.name} />

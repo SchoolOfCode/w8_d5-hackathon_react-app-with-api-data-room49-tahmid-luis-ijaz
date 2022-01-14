@@ -1,15 +1,17 @@
 import './App.css';
-// import {Routes, Route, Link} from 'react-router-dom'
-import Fetch from '../Fetch';
+import { Routes, Route, Link } from 'react-router-dom';
+import FetchData from '../Fetch';
 import Spiderman from '../Spiderman';
 import Superman from '../Superman';
 
 function App() {
   return (
     <div className="App">
-      <Fetch />
-      <Spiderman />
-      <Superman />
+      <Routes>
+        <Route path="/" element={<FetchData />} />
+        <Route path="spiderman" element={<Spiderman />} />
+        <Route path="superman" element={<Superman />} />
+      </Routes>
     </div>
   );
 }
