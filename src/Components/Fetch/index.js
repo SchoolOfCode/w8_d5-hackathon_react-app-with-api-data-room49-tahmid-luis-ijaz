@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Fetch() {
   // const[hero, setHero] = useState("superman")
   const [holdHero, setHoldHero] = useState('');
-  
+
   useEffect(() => {
     async function fetchData() {
       let response = await fetch(
@@ -21,19 +21,17 @@ function Fetch() {
 
   return holdHero ? (
     <>
-    
-     <nav>
+      <nav>
         <Link to="/spiderman">Spiderman</Link>
-        <br/>
+        <br />
         <Link to="/superman">Superman</Link>
       </nav>
       <h1>{holdHero.name}</h1>
       <h2>{holdHero.biography['full-name']} </h2>
       <img src={holdHero.image['url']} alt={holdHero.name} />
-    
     </>
   ) : (
-    <>Loading...</>
+    <>Loading...wait for it...</>
   );
 }
 export default Fetch;
